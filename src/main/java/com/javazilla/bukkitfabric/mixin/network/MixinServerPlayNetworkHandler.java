@@ -83,7 +83,7 @@ import net.minecraft.world.RaycastContext;
 import net.minecraft.world.WorldView;
 
 @SuppressWarnings("deprecation")
-@Mixin(ServerPlayNetworkHandler.class)
+@Mixin(ServerPlayNetworkHandler.class, priority = 999) //Allows Carpet Mod to overrride
 public abstract class MixinServerPlayNetworkHandler implements IMixinPlayNetworkHandler {
 
     @Shadow 
